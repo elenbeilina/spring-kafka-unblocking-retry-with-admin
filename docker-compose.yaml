@@ -1,6 +1,18 @@
-version: '2'
+version: '3'
 
 services:
+
+  consumer:
+    image: consumer
+    hostname: consumer
+    container_name: consumer
+    ports:
+      - "8070:8070"
+    depends_on:
+      - zookeeper
+      - kafka-broker
+    networks:
+      - spring-kafka-retry-topic
 
   producer:
     image: producer
