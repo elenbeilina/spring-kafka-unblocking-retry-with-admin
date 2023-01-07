@@ -44,11 +44,6 @@ public class ConsumerApplication {
 
     private final Random random;
 
-    //Errors does not retry
-    //1 - no retries
-    //2 - adds -backoff value in the end
-    //3,4 etc - just adds -retry
-    //Admin client not working without spring web
     @KafkaListener(id = "students_consumer", topics = "main")
     @RetryableTopic(fixedDelayTopicStrategy = FixedDelayStrategy.SINGLE_TOPIC,
         backoff = @Backoff(4000), attempts = "4")
