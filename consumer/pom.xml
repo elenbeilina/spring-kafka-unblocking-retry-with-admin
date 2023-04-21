@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>com.aqualen</groupId>
-        <artifactId>spring-kafka-retry-topic</artifactId>
+        <artifactId>spring-kafka-unblocking-retry-with-admin</artifactId>
         <version>1.0.0</version>
     </parent>
 

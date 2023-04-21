@@ -1,4 +1,4 @@
-### App for adding shark to aquarium.
+### App for managing Rick and Morty quotes.
 This app is producing  Rick and Morty quotes to the Kafka topic by rest endpoint.
 If exception happened in consumer listener method - then record retries 4 times and if retries does not help -
 record sends to DLQ by DltHandler.
